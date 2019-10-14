@@ -27,8 +27,7 @@
     <link rel="manifest" href="<?php echo URL; ?>site.webmanifest">
     <link rel="apple-touch-icon" href="<?php echo IMG; ?>icon.png">
     <link rel="icon" type="image/png" href="<?php echo IMG ; ?>icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" integrity="sha256-piqEf7Ap7CMps8krDQsSOTZgF+MU/0MPyPW2enj5I40=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version(); ?>">
+    <link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version(); ?>" async>
 </head>
 
 <body>

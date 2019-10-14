@@ -5,7 +5,7 @@
     </div>
 </footer>
  
- <script src="<?php echo JS; ?>app.min.js<?=get_version(); ?>"></script>
+ <script src="<?php echo JS; ?>app.min.js<?=get_version(); ?>" async></script>
 </body>
 
 </html>
