@@ -9,7 +9,7 @@ function get_site_name(){
 }
 
 function get_version(){
-  return '?v='.VERSION;
+  return '?v='.ASSETS_VERSION;
 }
 
 function now(){
