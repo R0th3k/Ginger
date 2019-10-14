@@ -6,6 +6,16 @@
  * Repositorio: https://github.com/R0th3k/Ginger
  * Creado: Octubre 2019
  * Ultima Actualizacion: Octubre 2019
+ * ,_     _
+ * |\\_,-~/
+ * / _  _ |    ,--.
+ *(  @  @ )   / ,-'
+ * \  _T_/-._( (
+ * /         `. \
+ *|         _  \ |
+ * \ \ ,  /      |
+ *  || |-_\__   /
+ * ((_/`(____,-'
 */
 
 //Requerir el archivo de la clase Ginger.php
