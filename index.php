@@ -1,6 +1,6 @@
 <?php
 /**
- * Ginger Framework 1.1.0
+ * Ginger Framework 1.0.1
  * Autor: Héctor Peña
  * Url Autor: https://hektor.mx
  * Repositorio: https://github.com/R0th3k/Ginger
