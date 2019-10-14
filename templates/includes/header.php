@@ -5,7 +5,7 @@
     <meta charset="<?php echo CHARSET; ?>">
     <title><?php echo isset($d->title) ? $d->title .' | '. get_site_name() : 'Bienvenido | '. get_site_name()?></title>
     <meta name="description" content="<?php echo isset($d->description) ? $d->description  :  SITE_DESCRIPTION ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="keywords" content="<?php echo isset($d->keywords) ? $d->keywords  :  SITE_KEYWORDS ?>">
     <meta name="theme-color" content="<?php echo isset($d->theme_color) ? $d->theme_color  :  THEME_COLOR ?>">
     <!-- Twitter Card data -->
