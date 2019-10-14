@@ -69,10 +69,11 @@ gulp.task('sass', function () {
 
 var jsFiles = [
   paths.scripts + "/lib/jquery-3.4.0.js",
-  paths.scripts + "/lib/sweetalert2.all.min.js",
-  paths.scripts + "/lib/owl.carousel.min.js",
-  paths.scripts + "/lib/modernizr.js",
-  paths.scripts + "/lib/jquery.pogo-slider.js",
+  // paths.scripts + "/lib/sweetalert2.all.min.js",
+  // paths.scripts + "/lib/owl.carousel.min.js",
+  // paths.scripts + "/lib/modernizr.js",
+  // paths.scripts + "/lib/jquery.pogo-slider.js",
+  paths.scripts + "/lib/lazyload.min.js",
   paths.scripts + "/lib/bootstrap.js",
   paths.scripts + "app.js"
 ];

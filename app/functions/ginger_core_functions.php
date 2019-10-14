@@ -26,6 +26,16 @@ function img($image,$class = null, $alt = null,$external=false){
 return  $the_img;
 }
 
+//Funcion para imprimir imagenes con carga diferida
+function lazy($image,$class = null, $alt = null, $external = null){
+  if($external){
+    $the_img = '<img alt="'.$alt.'" data-src="'.$image.get_version().'" class="'.$class .'"/>';
+  }else{
+    $the_img = '<img alt="'.$alt.'" data-src="'.IMG.$image.get_version().'" class="'.$class .'"/>';
+  }
+  return  $the_img;
+}
+
 //Imprime un array formateado
 function print_array($array) {
   echo '<pre>';
