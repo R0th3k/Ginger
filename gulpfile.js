@@ -24,8 +24,8 @@ var gulp = require('gulp'),
  */
 var paths = {
   public: './',
-  sass: './assets/styles/sass/',
-  scripts: './assets/js/',
+  sass: './src/sass/',
+  scripts: './src/js/',
   images: './assets/images/',
   js: './assets/js/',
   css: './assets/styles/',
@@ -66,6 +66,7 @@ gulp.task('sass', function () {
       stream: true
     }));
 });
+
 
 var jsFiles = [
   paths.scripts + "/lib/jquery-3.4.0.js",
