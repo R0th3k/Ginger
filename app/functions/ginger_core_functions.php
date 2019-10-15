@@ -17,22 +17,40 @@ function now(){
 }
 
 //Funcion para imprimir imagenes
-function img($image,$class = null, $alt = null,$external=false){
-  if($external){
-    $the_img = '<img src="'.$image. get_version() .'" class="'.$class.'" alt="'.$alt.'">';
-  }else{
-    $the_img = '<img src="'.IMG.$image. get_version() .'" class="'.$class.'" alt="'.$alt.'">';
-  }
+function img( $image, $type='png', $class = null, $alt = null, $external=false){
+
+  $img_external = '
+    <img src="'.$image.$type.get_version().'" alt="'.$alt.'" class="'.$class.'">
+  ';
+
+  $img_inner = '
+  <picture>
+      <source srcset="'.IMG.$image.'.webp'.get_version().'" type="image/webp" class="'.$class.'">
+      <img src="'.IMG.$image.'.'.$type.get_version().'" alt="'.$alt.'" class="'.$class.'">
+  </picture>
+  ';
+
+  ($external) ? $the_img = $img_external: $the_img = $img_inner;
+  
 return  $the_img;
 }
 
 //Funcion para imprimir imagenes con carga diferida
-function lazy($image,$class = null, $alt = null, $external = null){
-  if($external){
-    $the_img = '<img alt="'.$alt.'" data-src="'.$image.get_version().'" class="'.$class .'"/>';
-  }else{
-    $the_img = '<img alt="'.$alt.'" data-src="'.IMG.$image.get_version().'" class="'.$class .'"/>';
-  }
+function lazy($image, $type='png', $class = null, $alt = null, $external=false){
+  
+  $img_external = '
+    <img data-src="'.$image.$type.get_version().'" alt="'.$alt.'" class="'.$class.'">
+  ';
+    
+  $img_inner = '
+  <picture>
+      <source data-srcset="'.IMG.$image.'.webp'.get_version().'" type="image/webp" class="'.$class.'">
+      <img data-src="'.IMG.$image.'.'.$type.get_version().'" alt="'.$alt.'" class="'.$class.'">
+  </picture>
+  ';
+
+  ($external) ? $the_img = $img_external: $the_img = $img_inner;
+
   return  $the_img;
 }
 
