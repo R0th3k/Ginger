@@ -28,7 +28,9 @@
     <link rel="apple-touch-icon" href="<?php echo IMG; ?>icon.png">
     <link rel="icon" type="image/png" href="<?php echo IMG ; ?>icon.png">
     <?php echo gfonts(GFONTS); ?>
-    <link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version(); ?>" async>
+    <link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version();?>" media="none" onload="if(media!='all')media='all'">
+    <noscript><link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version();?>"></noscript>
+    <?php echo ginger_loader(1,'#00b894','rgba(255,255,255,.5)'); ?>
 </head>
 
 <body>
