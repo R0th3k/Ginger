@@ -99,5 +99,8 @@ function the_ip() {
   }
 
   function gfonts($fonts){
-    return "<link href='$fonts' rel='stylesheet' async>";
+    $link='
+    <link rel="stylesheet" href="'.$fonts.'" media="none" onload="if(media!="all")media="all"">
+    <noscript><link rel="stylesheet" href="'.$fonts.'"></noscript>';
+    return $link;
   }

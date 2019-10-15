@@ -7,7 +7,6 @@ var gulp = require('gulp'),
   sass = require('gulp-dart-sass'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
-  purify = require('gulp-purifycss'),
   sourcemaps = require('gulp-sourcemaps'),
   notify = require('gulp-notify'),
   imagemin = require('gulp-imagemin'),
@@ -57,23 +56,18 @@ gulp.task('sass', function () {
     }))
     .pipe(sourcemaps.init())
     .on('error', sass.logError)
-    .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+    .pipe(prefix(['last 2 versions', '> 1%', 'ie 8', 'ie 7'], {
       cascade: true
     }))
-    // .pipe(sourcemaps.write('../../assets/styles/'))
-    .pipe(gulp.dest(paths.sass))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(paths.css))
     .pipe(notify({ message: 'Finished minifying Styles' }))
     .pipe(browserSync.reload({
       stream: true
     }));
 });
 
-gulp.task('purifyCss', function() {
-  return gulp.src(paths.sass+'style.css')
-    .pipe(purify([paths.js+'/*.js', './**/*.php']))
-    // .pipe(sourcemaps.write('../../assets/styles/'))
-    .pipe(gulp.dest(paths.css));
-});
+
 
 var jsFiles = [
   paths.scripts + "/lib/jquery-3.4.0.js",
@@ -145,7 +139,6 @@ gulp.task('php', browserSync.reload);
  */
 gulp.task('watch', function () {
   gulp.watch(paths.sass + '**/*.scss', ['sass']);
-  gulp.watch(paths.sass + '**/*.scss', ['purifyCss']);
   gulp.watch(paths.scripts + 'app.js', ['minifyJs']);
   gulp.watch("./**/*.php", ['php']); 
 });
