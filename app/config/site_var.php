@@ -4,7 +4,6 @@
     $pathRemote = '/public_html';
     $urlRemote = 'http://tusitio.com/';
 
-
     define('TITLE','Lorem ipsum');
     define('SITE_NAME','🐈 Ginger Framework');
     define('SITE_DESCRIPTION','Lorem ipsum');
@@ -14,5 +13,6 @@
     define('CHARSET','utf-8');
     define('LANG_SITE','es');
     define('LOCALE','es_MX');
+    define('GFONTS','https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
     define('RECAPTCHA_PUBLIC','');
     define('RECAPTCHA_PRIVATE','');

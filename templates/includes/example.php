@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-lg-4">
       <?php echo lazy(
-        /*$image*/ 'http://placekitten.com/196/196',
+        /*$image*/ 'https://placekitten.com/196/196',
         /*$type*/ '',
         /*$class*/ 'rounded-circle mb-3',
         /*$alt*/ 'Generic placeholder image',
@@ -25,7 +25,7 @@
       <!-- /.col-lg-4-->
       <div class="col-lg-4">
         <?php echo lazy(
-          /*$image*/ 'http://placekitten.com/196/196',
+          /*$image*/ 'https://placekitten.com/196/196',
           /*$type*/ '',
           /*$class*/ 'rounded-circle mb-3',
           /*$alt*/ 'Generic placeholder image',
@@ -41,7 +41,7 @@
       <div class="col-lg-4">
       
       <?php echo lazy(
-        /*$image*/ 'http://placekitten.com/196/196',
+        /*$image*/ 'https://placekitten.com/196/196',
         /*$type*/ '',
         /*$class*/ 'rounded-circle mb-3',
         /*$alt*/ 'Generic placeholder image',
@@ -85,7 +85,7 @@
         </div>
         <div class="col-md-5 order-md-1">
             <?php echo lazy(
-              /*$image*/'http://placekitten.com/800/600',
+              /*$image*/'https://placekitten.com/800/600',
               /*$type*/'',
               /*$class*/'featurette-image img-fluid mx-auto w-100',
               /*$alt*/'Generic placeholder image 2',
@@ -102,7 +102,7 @@
         </div>
         <div class="col-md-5">
             <?php echo lazy(
-              /*$image*/ 'http://placekitten.com/700/500',
+              /*$image*/ 'https://placekitten.com/700/500',
               /*$type*/ '',
               /*$class*/ 'featurette-image img-fluid mx-auto w-100',
               /*$alt*/ 'Generic placeholder image 2',

@@ -27,6 +27,7 @@
     <link rel="manifest" href="<?php echo URL; ?>site.webmanifest">
     <link rel="apple-touch-icon" href="<?php echo IMG; ?>icon.png">
     <link rel="icon" type="image/png" href="<?php echo IMG ; ?>icon.png">
+    <?php echo gfonts(GFONTS); ?>
     <link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version(); ?>" async>
 </head>
 

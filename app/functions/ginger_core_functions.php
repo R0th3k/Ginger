@@ -97,3 +97,7 @@ function the_ip() {
     $useragent = $_SERVER['HTTP_USER_AGENT'];
     return "<b>Tu navegador es</b>: " . $useragent;
   }
+
+  function gfonts($fonts){
+    return "<link href='$fonts' rel='stylesheet' async>";
+  }
