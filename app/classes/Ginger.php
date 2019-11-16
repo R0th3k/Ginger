@@ -127,7 +127,7 @@ class Ginger{
         //Saber si se esta pasando en la url el nombre de un controlador
         
         if(isset($this->uri[0])){
-            $current_controller = $this->uri[0];
+            $current_controller =  str_replace('-', '_', $this->uri[0]); // users Controller.php
             unset($this->uri[0]);
         }else{
             $current_controller = DEFAULT_CONTROLLER;
