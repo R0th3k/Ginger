@@ -2,6 +2,7 @@
   <div class="jumbotron">
     <h1 class="display-4"><?php echo SITE_NAME; ?></h1>
     <p class="lead"><?php echo SITE_KEYWORDS; ?></p>
+    <hello></hello>
     <p class="lead"><a class="btn btn-primary btn-lg btn-rounded" href="" role="button">Learn more</a></p>
   </div>
   <!--Marketing messaging and featurettes ==================================================-->
@@ -9,7 +10,7 @@
   <div class="container marketing p-3">
     <div class="row">
       <div class="col-lg-4">
-      <?php echo lazy(
+      <?php echo img(
         /*$image*/ 'https://placekitten.com/196/196',
         /*$type*/ '',
         /*$class*/ 'rounded-circle mb-3',
@@ -24,7 +25,7 @@
       </div>
       <!-- /.col-lg-4-->
       <div class="col-lg-4">
-        <?php echo lazy(
+        <?php echo img(
           /*$image*/ 'https://placekitten.com/196/196',
           /*$type*/ '',
           /*$class*/ 'rounded-circle mb-3',
@@ -40,7 +41,7 @@
       <!-- /.col-lg-4-->
       <div class="col-lg-4">
       
-      <?php echo lazy(
+      <?php echo img(
         /*$image*/ 'https://placekitten.com/196/196',
         /*$type*/ '',
         /*$class*/ 'rounded-circle mb-3',
@@ -66,7 +67,7 @@
             commodo.</p>
         </div>
         <div class="col-md-5">
-            <?php echo lazy(
+            <?php echo img(
               /*$image*/ 'example/test-image',
               /*$type*/ 'jpg',
               /*$class*/ 'featurette-image img-fluid mx-auto w-100',
@@ -84,7 +85,7 @@
             commodo.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <?php echo lazy(
+            <?php echo img(
               /*$image*/'https://placekitten.com/800/600',
               /*$type*/'',
               /*$class*/'featurette-image img-fluid mx-auto w-100',
@@ -101,7 +102,7 @@
             commodo.</p>
         </div>
         <div class="col-md-5">
-            <?php echo lazy(
+            <?php echo img(
               /*$image*/ 'https://placekitten.com/700/500',
               /*$type*/ '',
               /*$class*/ 'featurette-image img-fluid mx-auto w-100',

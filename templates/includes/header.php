@@ -28,12 +28,12 @@
     <link rel="apple-touch-icon" href="<?php echo IMG; ?>icon.png">
     <link rel="icon" type="image/png" href="<?php echo IMG ; ?>icon.png">
     <?php echo gfonts(GFONTS); ?>
-    <link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version();?>" media="none" onload="if(media!='all')media='all'">
-    <noscript><link rel="stylesheet" href="<?php echo CSS; ?>style.css<?=get_version();?>"></noscript>
-    <?php echo ginger_loader(1,'#00b894','rgba(255,255,255,.5)'); ?>
+    <link rel="stylesheet" href="<?php echo CSS; ?>bundle.css<?=get_version();?>">
+    
 </head>
 
 <body>
 <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
+<div id="app">
