@@ -1,6 +1,7 @@
 <main role="main">
   <div class="jumbotron">
-    <h1 class="display-4"><?php echo SITE_NAME; ?></h1>
+    
+    <h1 class="display-4"><i class="fab fa-yarn mr-2"></i><?php echo SITE_NAME; ?></h1>
     <p class="lead"><?php echo SITE_KEYWORDS; ?></p>
     <hello></hello>
     <p class="lead"><a class="btn btn-primary btn-lg btn-rounded" href="" role="button">Learn more...</a></p>

@@ -12,6 +12,7 @@
   "author": "Hektor Peña",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "babel-core": "^6.26.3",
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.4",

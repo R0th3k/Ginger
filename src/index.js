@@ -1,3 +1,4 @@
+import "../node_modules/@fortawesome/fontawesome-free/js/all";
 import "./scss/styles.scss";
 
 import Vue from 'vue';
