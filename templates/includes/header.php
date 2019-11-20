@@ -1,3 +1,4 @@
+<?php ob_start("sanitize_output");?>
 <!doctype html>
 <html class="no-js" lang="<?php echo LANG_SITE; ?>">
 <?php echo $siteDescription;?>
