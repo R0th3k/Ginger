@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{title}}</h1>
+    <h1 class="title p-3">{{title}}</h1>
   </div>
 </template>
 
@@ -9,12 +9,15 @@
     name:'hello',
     data(){
       return{
-        title:'Hello World from component .vue'
+        title:'Hola Mundo desde un componente .vue'
       }
     }
   }
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+  h1{
+    background: var(--primary);
+    color:white;
+  }
 </style>

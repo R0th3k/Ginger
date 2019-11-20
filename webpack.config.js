@@ -42,15 +42,15 @@ module.exports = {
     }),
     new BrowserSyncPlugin({
       proxy: 'http://localhost:8888/www/ginger/',
-      tunnel: false,
+      tunnel: true,
       files: [
         {
             match: [
                 '**/*.php',
-                './src/scss/*.css',
-                './assets/styles/*.css',
-                './src/js/components/*.vue',
-                './assets/js/*.js'
+                '**/*.scss',
+                '**/*.css',
+                '**/*.vue',
+                '**/*.js'
                 
             ],
             fn: function(event, file) {

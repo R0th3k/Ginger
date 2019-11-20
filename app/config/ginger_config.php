@@ -1,5 +1,26 @@
 <?php 
 
+    $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+   
+
+    if (false !== strpos($url,'/dev/')) {
+        define('DEV',true);
+    } else {
+        define('DEV',false);
+    }
+
+
+    $pathLocal = '/www/ginger/';
+    $urlLocal ='http://127.0.0.1:';
+
+    if(DEV){
+        $pathRemote = '/public_html/dev';
+        $urlRemote = $url;
+    }else{
+        $pathRemote = '/public_html';
+        $urlRemote = $url;
+    }
+
 require_once 'site_var.php';
 
 //Verificar si estamos trabajando de forma local o remota
@@ -68,3 +89,7 @@ define('DB_CHARSET','utf8');
 define('DEFAULT_CONTROLLER','home');
 define('DEFAULT_ERROR_CONTROLLER','error');
 define('DEFAULT_METHOD','index');
+
+
+ini_set('memory_limit', '512M');
+error_reporting(E_ALL & ~E_NOTICE);

@@ -1,8 +1,6 @@
 <?php
-    $pathLocal = '/www/ginger/';
-    $urlLocal ='http://127.0.0.1:';
-    $pathRemote = '/public_html';
-    $urlRemote = 'http://tusitio.com/';
+
+    
 
     define('TITLE','Lorem ipsum');
     define('SITE_NAME','Ginger Framework');
