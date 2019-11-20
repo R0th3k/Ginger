@@ -9,7 +9,7 @@
     name:'hello',
     data(){
       return{
-        title:'Hola Mundo desde un componente .vue'
+        title:'Hola Mundo desde un componente .vue '
       }
     }
   }
