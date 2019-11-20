@@ -1,16 +1,15 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
+  watch:true,
   entry: './src/index.js',
   output: {
     path: __dirname + '/assets',
     filename: 'js/bundle.js'
   }, 
-  devServer:{
-    port: 7777
-  },
+
   module: {
     rules: [
       {
@@ -38,11 +37,30 @@ module.exports = {
   },
   plugins:[
     new VueLoaderPlugin(),
-    new HtmlWebpackPlugin({
-      template: './src/index.html'
-    }),
     new MiniCssExtractPlugin({
       filename: 'styles/bundle.css'
-    })
+    }),
+    new BrowserSyncPlugin({
+      proxy: 'http://localhost:8888/www/ginger/',
+      tunnel: false,
+      files: [
+        {
+            match: [
+                '**/*.php',
+                './src/scss/*.css',
+                './assets/styles/*.css',
+                './src/js/components/*.vue',
+                './assets/js/*.js'
+                
+            ],
+            fn: function(event, file) {
+                if (event === "change") {
+                    const bs = require('browser-sync').get('bs-webpack-plugin');
+                    bs.reload();
+                }
+            }
+        }
+    ]
+  })
   ]
 }

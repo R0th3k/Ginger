@@ -3,7 +3,7 @@
     <h1 class="display-4"><?php echo SITE_NAME; ?></h1>
     <p class="lead"><?php echo SITE_KEYWORDS; ?></p>
     <hello></hello>
-    <p class="lead"><a class="btn btn-primary btn-lg btn-rounded" href="" role="button">Learn more</a></p>
+    <p class="lead"><a class="btn btn-primary btn-lg btn-rounded" href="" role="button">Learn more...</a></p>
   </div>
   <!--Marketing messaging and featurettes ==================================================-->
   <!-- Wrap the rest of the page in another container to center all the content.-->
