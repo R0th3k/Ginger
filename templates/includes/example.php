@@ -10,7 +10,7 @@
   <div class="container marketing p-3">
     <div class="row">
       <div class="col-lg-4">
-      <?php echo img(
+      <?php echo lazy(
         /*$image*/ 'https://placekitten.com/196/196',
         /*$type*/ '',
         /*$class*/ 'rounded-circle mb-3',
@@ -25,7 +25,7 @@
       </div>
       <!-- /.col-lg-4-->
       <div class="col-lg-4">
-        <?php echo img(
+        <?php echo lazy(
           /*$image*/ 'https://placekitten.com/196/196',
           /*$type*/ '',
           /*$class*/ 'rounded-circle mb-3',
@@ -41,7 +41,7 @@
       <!-- /.col-lg-4-->
       <div class="col-lg-4">
       
-      <?php echo img(
+      <?php echo lazy(
         /*$image*/ 'https://placekitten.com/196/196',
         /*$type*/ '',
         /*$class*/ 'rounded-circle mb-3',
@@ -67,10 +67,10 @@
             commodo.</p>
         </div>
         <div class="col-md-5">
-            <?php echo img(
+            <?php echo lazy(
               /*$image*/ 'example/test-image',
               /*$type*/ 'jpg',
-              /*$class*/ 'featurette-image img-fluid mx-auto w-100',
+              /*$class*/ 'featurette-image lazy-fluid mx-auto w-100',
               /*$alt*/ 'Generic placeholder image',
               /*$external*/ false);
             ?>
@@ -85,10 +85,10 @@
             commodo.</p>
         </div>
         <div class="col-md-5 order-md-1">
-            <?php echo img(
+            <?php echo lazy(
               /*$image*/'https://placekitten.com/800/600',
               /*$type*/'',
-              /*$class*/'featurette-image img-fluid mx-auto w-100',
+              /*$class*/'featurette-image lazy-fluid mx-auto w-100',
               /*$alt*/'Generic placeholder image 2',
               /*$external*/true);
             ?>
@@ -102,10 +102,10 @@
             commodo.</p>
         </div>
         <div class="col-md-5">
-            <?php echo img(
+            <?php echo lazy(
               /*$image*/ 'https://placekitten.com/700/500',
               /*$type*/ '',
-              /*$class*/ 'featurette-image img-fluid mx-auto w-100',
+              /*$class*/ 'featurette-image lazy-fluid mx-auto w-100',
               /*$alt*/ 'Generic placeholder image 2',
               /*$external*/true);
             ?>

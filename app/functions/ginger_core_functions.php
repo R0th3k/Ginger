@@ -39,13 +39,13 @@ return  $the_img;
 function lazy($image, $type='png', $class = null, $alt = null, $external=false){
   
   $img_external = '
-    <img data-src="'.$image.$type.get_version().'" alt="'.$alt.'" class="'.$class.'">
+    <img data-src="'.$image.$type.get_version().'" alt="'.$alt.'" class="lazy '.$class.'">
   ';
     
   $img_inner = '
   <picture>
-      <source data-srcset="'.IMG.$image.'.webp'.get_version().'" type="image/webp" class="'.$class.'">
-      <img data-src="'.IMG.$image.'.'.$type.get_version().'" alt="'.$alt.'" class="'.$class.'">
+      <source data-srcset="'.IMG.$image.'.webp'.get_version().'" type="image/webp" class="lazy '.$class.'">
+      <img data-src="'.IMG.$image.'.'.$type.get_version().'" alt="'.$alt.'" class="lazy '.$class.'">
   </picture>
   ';
 

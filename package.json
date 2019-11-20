@@ -24,6 +24,7 @@
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
+    "vanilla-lazyload": "^12.4.0",
     "vue-loader": "^15.7.2",
     "vue-progressbar": "^0.7.5",
     "vue-template-compiler": "^2.6.10",
