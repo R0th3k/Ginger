@@ -1,8 +1,8 @@
 <?php 
 
-    $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
    
-
+    //Si encuentra el string "dev" en la url se activa la constante DEV en true
     if (false !== strpos($url,'/dev/')) {
         define('DEV',true);
     } else {
@@ -15,10 +15,10 @@
 
     if(DEV){
         $pathRemote = '/public_html/dev';
-        $urlRemote = $url;
+        $urlRemote = 'https://sitedevelopment.com/dev/';
     }else{
         $pathRemote = '/public_html';
-        $urlRemote = $url;
+        $urlRemote = 'https://siteproduction.com/';
     }
 
 require_once 'site_var.php';
