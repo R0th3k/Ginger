@@ -1,5 +1,5 @@
 <div>
-<b-navbar toggleable="lg" type="dark" variant="primary" fixed="top" position="sticky">
+<b-navbar toggleable="lg" type="light" variant="light" fixed="top" position="sticky">
     <b-navbar-brand href="#">NavBar</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
