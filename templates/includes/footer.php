@@ -15,6 +15,11 @@ telefono="000000000">
 
 </div><!--/End App--> 
 <script src="<?php echo JS; ?>bundle.js<?=get_version(); ?>" async></script>
+<script>
+    window.onload = function() {
+        document.getElementById('ginger-loader').style.display = "none";
+    };
+</script>
 </body>
 </html>
 <?php ob_end_flush(); ?>

@@ -31,11 +31,21 @@
     <?php echo gfonts(GFONTS); ?>
     <link rel="stylesheet" href="<?php echo CSS; ?>bundle.css<?=get_version();?>">
     
+    <div class='ginger-loader' id="ginger-loader">
+        <div class='lds-ripple'>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    
 </head>
 
 <body>
 <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
-<div id="app">
+
+</div>
+<div id="app" v-cloak>
+    
     <vue-progress-bar></vue-progress-bar>

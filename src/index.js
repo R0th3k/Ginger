@@ -5,8 +5,11 @@ Vue.use(BootstrapVue)
 import "./scss/styles.scss";
 
 import Vue from 'vue';
+
+
 import hello_world from './js/components/HelloWorld.vue';
 import float_social from './js/components/FloatSocial.vue';
+
 
 import VueProgressBar from 'vue-progressbar';
 
@@ -33,7 +36,7 @@ new Vue({
   el:'#app',
   components:{
     hello_world,
-    float_social
+    float_social,
   },
   data:{
     mensaje: 'Hola Vue!'
