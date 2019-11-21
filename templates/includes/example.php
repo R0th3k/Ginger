@@ -3,7 +3,7 @@
     
     <h1 class="display-4"><i class="fab fa-yarn mr-2"></i><?php echo SITE_NAME; ?></h1>
     <p class="lead"><?php echo SITE_KEYWORDS; ?></p>
-    <hello></hello>
+    <hello_world></hello_world>
 
       <b-button variant="primary" size="lg" v-b-modal.modal-1>Launch demo modal</b-button>
       <b-modal id="modal-1" title="BootstrapVue">

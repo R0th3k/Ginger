@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title p-3">{{title}}</h1>
+    <h3 class="subtitle">{{title}}</h3>
   </div>
 </template>
 
@@ -16,8 +16,5 @@
 </script>
 
 <style lang="scss" scoped>
-  h1{
-    background: var(--primary);
-    color:white;
-  }
+  
 </style>
