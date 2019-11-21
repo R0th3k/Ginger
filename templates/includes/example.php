@@ -4,7 +4,11 @@
     <h1 class="display-4"><i class="fab fa-yarn mr-2"></i><?php echo SITE_NAME; ?></h1>
     <p class="lead"><?php echo SITE_KEYWORDS; ?></p>
     <hello></hello>
-    <p class="lead"><a class="btn btn-primary btn-lg btn-rounded" href="" role="button">Learn more...</a></p>
+
+      <b-button variant="primary" size="lg" v-b-modal.modal-1>Launch demo modal</b-button>
+      <b-modal id="modal-1" title="BootstrapVue">
+        <p class="my-4">Hello from modal!</p>
+      </b-modal>
   </div>
   <!--Marketing messaging and featurettes ==================================================-->
   <!-- Wrap the rest of the page in another container to center all the content.-->

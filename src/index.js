@@ -41,6 +41,7 @@ new Vue({
   },
   mounted(){
     this.$Progress.finish()
+    this.$bvModal.show('modal-1')
   },
   created(){
     this.$Progress.start()
