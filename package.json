@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server --progress --colors",
     "start": "webpack --mode development && npm run dev",
     "watch": "webpack --watch --mode development",
-    "prod": "webpack --mode production"
+    "prod": "webpack -p"
   },
   "author": "Hektor Peña",
   "license": "ISC",
@@ -17,7 +17,6 @@
     "babel-env": "^2.4.1",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
-    "bootstrap": "^4.3.1",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^3.2.0",
@@ -30,6 +29,7 @@
     "vue-progressbar": "^0.7.5",
     "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },

@@ -1,4 +1,3 @@
-import "../node_modules/@fortawesome/fontawesome-free/js/all";
 import BootstrapVue from 'bootstrap-vue'
 Vue.use(BootstrapVue)
 

@@ -1,6 +1,7 @@
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
+//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   watch:true,
@@ -65,6 +66,7 @@ module.exports = {
             }
         }
     ]
-  })
+  }),
+  //new BundleAnalyzerPlugin()
   ]
 }
