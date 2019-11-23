@@ -5,10 +5,8 @@ import "./scss/styles.scss";
 
 import Vue from 'vue';
 
-
-import hello_world from './js/components/HelloWorld.vue';
-import float_social from './js/components/FloatSocial.vue';
-
+import Vuelidate from 'vuelidate';
+Vue.use(Vuelidate);
 
 import VueProgressBar from 'vue-progressbar';
 
@@ -30,12 +28,17 @@ const options = {
 
 Vue.use(VueProgressBar, options);
 
+import hello_world from './js/components/HelloWorld.vue';
+import float_social from './js/components/FloatSocial.vue';
+import contact from './js/components/Contact.vue';
+
 
 new Vue({
   el:'#app',
   components:{
     hello_world,
     float_social,
+    contact
   },
   data:{
     mensaje: 'Hola Vue!'
