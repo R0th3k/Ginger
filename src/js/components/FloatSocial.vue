@@ -20,7 +20,7 @@
       facebook:String,
       instagram:String,
       mensaje:String,
-      telefono:Number,
+      telefono:String,
     },
     data(){
       return{

@@ -10,7 +10,7 @@ twitter="https://twitter.com/"
 facebook="https://facebook.com/" 
 instagram="https://instagram.com/" 
 mensaje="Hola estoy interesado en sus servicios" 
-telefono="000000000">
+telefono="0000000000">
 </float_social>
 
 </div><!--/End App--> 

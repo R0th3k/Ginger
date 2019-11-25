@@ -1,3 +1,9 @@
+
+<div class="container">
+  <div class="divider is-size-6"></div>
+  <contact></contact>
+</div>
+
 <main role="main">
   <div class="jumbotron">
     
