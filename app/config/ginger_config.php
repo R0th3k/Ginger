@@ -15,10 +15,10 @@
 
     if(DEV){
         $pathRemote = '/public_html/dev';
-        $urlRemote = 'https://sitedevelopment.com/dev/';
+        $urlRemote = 'https://hektor.mx/dev/';
     }else{
-        $pathRemote = '/public_html';
-        $urlRemote = 'https://siteproduction.com/';
+        $pathRemote = '/';
+        $urlRemote = 'https://ginger-fw.herokuapp.com/';
     }
 
 require_once 'site_var.php';
