@@ -5,6 +5,10 @@ import "./scss/styles.scss";
 
 import Vue from 'vue';
 
+import axios from 'axios';
+Vue.use(axios);
+
+
 import Vuelidate from 'vuelidate';
 Vue.use(Vuelidate);
 

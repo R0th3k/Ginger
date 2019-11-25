@@ -48,6 +48,12 @@
       Enviar mensaje 
     </b-button>
 
+    <p>{{$v.name.$model}}</p>
+    <p>{{$v.email.$model}}</p>
+    <p>{{$v.phone.$model}}</p>
+    <p>{{$v.subject.$model}}</p>
+    <p>{{$v.message.$model}}</p>
+
   </form>
 </template>
 
@@ -86,6 +92,26 @@
       },
     },
     methods:{
+      send(){
+          const axios = require('axios');
+          axios.post('https://hektor.mx/dev/templates/includes/sendMail.php', {
+          name: this.$v.name.$model,
+          email: this.$v.email.$model,
+          phone: this.$v.phone.$model,
+          subject: this.$v.subject.$model, 
+          message: this.$v.message.$model
+        })
+        .then(function (response) {
+          console.log(response);
+          alert('Data saved successfully');
+          //this.success = 'Data saved successfully';
+        })
+        .catch(function (error) {
+          console.log(error);
+          warning('Error: ' + error.response.status)
+          //this.response = 'Error: ' + error.response.status
+        });
+      },
       submit() {
         this.$v.$touch()
         if (this.$v.$invalid) {
@@ -95,8 +121,15 @@
           setTimeout(() => {
             this.sending = false;
             this.sent = true;
+            this.send();
           }, 2000)
         }
+      },
+      success(){
+        
+      },
+      warning(response){
+        alert(response);
       }
       }
     }
