@@ -43,16 +43,16 @@
       Gracias por tu mensaje, en breve te responderemos.
     </b-alert>
 
-    <b-button type="submit" variant="primary" class="w-100" v-if="!sent"> 
+     <b-button type="submit" variant="primary" class="w-100" v-if="!sent"> 
       <b-spinner small v-if="sending"></b-spinner>
       Enviar mensaje 
     </b-button>
 
-    <p>{{$v.name.$model}}</p>
-    <p>{{$v.email.$model}}</p>
-    <p>{{$v.phone.$model}}</p>
-    <p>{{$v.subject.$model}}</p>
-    <p>{{$v.message.$model}}</p>
+    <b-button type="submit" variant="primary" class="w-100" disabled v-if="sent"> 
+      Mensaje enviado
+    </b-button>
+
+    
 
   </form>
 </template>
@@ -92,9 +92,16 @@
       },
     },
     methods:{
+      success(){
+        this.sent = true;
+      },
+      warning(response){
+        alert(response);
+      },
       send(){
           const axios = require('axios');
-          axios.post('https://hektor.mx/dev/templates/includes/sendMail.php', {
+          const self = this;
+          axios.post(this.url+'templates/includes/sendMail.php', {
           name: this.$v.name.$model,
           email: this.$v.email.$model,
           phone: this.$v.phone.$model,
@@ -103,12 +110,12 @@
         })
         .then(function (response) {
           console.log(response);
-          alert('Data saved successfully');
+          self.success();
           //this.success = 'Data saved successfully';
         })
         .catch(function (error) {
           console.log(error);
-          warning('Error: ' + error.response.status)
+          self.warning(response);
           //this.response = 'Error: ' + error.response.status
         });
       },
@@ -120,17 +127,11 @@
           this.sending = true;
           setTimeout(() => {
             this.sending = false;
-            this.sent = true;
             this.send();
-          }, 2000)
+          }, 500)
         }
       },
-      success(){
-        
-      },
-      warning(response){
-        alert(response);
-      }
+      
       }
     }
   

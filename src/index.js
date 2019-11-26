@@ -5,6 +5,28 @@ import "./scss/styles.scss";
 
 import Vue from 'vue';
 
+
+Vue.mixin({
+  data: function() {
+      return {
+          url:'https://hektor.mx/dev/',
+      }
+  },
+  created: function() {
+
+
+  },
+  mounted:function(){
+    
+  },
+  methods:{
+   
+  },
+})//end mixin
+
+
+
+
 import axios from 'axios';
 Vue.use(axios);
 
