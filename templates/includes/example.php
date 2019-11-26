@@ -1,9 +1,3 @@
-
-<div class="container">
-  <div class="divider is-size-6"></div>
-  <contact></contact>
-</div>
-
 <main role="main">
   <div class="jumbotron">
     
@@ -124,6 +118,16 @@
       <hr class="featurette-divider">
       <!-- /END THE FEATURETTES-->
       <!-- /.container-->
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="divider is-size-6"></div>
+    <h3 class="title c-primary mt-3 mb-3 text-center">Contacto</h3>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6"><contact></contact></div>
+      <div class="col-md-3"></div>
     </div>
   </div>
 </main>
