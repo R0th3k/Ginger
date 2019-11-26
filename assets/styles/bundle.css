@@ -4379,8 +4379,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("https://hektor.mx/dev/assets/fonts/fa-regular-400.eot");
-  src: url("https://hektor.mx/dev/assets/fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://hektor.mx/dev/assets/fonts/fa-regular-400.woff2") format("woff2"), url("https://hektor.mx/dev/assets/fonts/fa-regular-400.woff") format("woff"), url("https://hektor.mx/dev/assets/fonts/fa-regular-400.ttf") format("truetype"), url("https://hektor.mx/dev/assets/fonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("https://ginger-fw.herokuapp.com//fa-regular-400.eot");
+  src: url("https://ginger-fw.herokuapp.com//fa-regular-400.eot?#iefix") format("embedded-opentype"), url("https://ginger-fw.herokuapp.com//fa-regular-400.woff2") format("woff2"), url("https://ginger-fw.herokuapp.com//fa-regular-400.woff") format("woff"), url("https://ginger-fw.herokuapp.com//fa-regular-400.ttf") format("truetype"), url("https://ginger-fw.herokuapp.com//fa-regular-400.svg#fontawesome") format("svg"); }
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4395,8 +4395,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url("https://hektor.mx/dev/assets/fonts/fa-solid-900.eot");
-  src: url("https://hektor.mx/dev/assets/fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://hektor.mx/dev/assets/fonts/fa-solid-900.woff2") format("woff2"), url("https://hektor.mx/dev/assets/fonts/fa-solid-900.woff") format("woff"), url("https://hektor.mx/dev/assets/fonts/fa-solid-900.ttf") format("truetype"), url("https://hektor.mx/dev/assets/fonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("https://ginger-fw.herokuapp.com//fa-solid-900.eot");
+  src: url("https://ginger-fw.herokuapp.com//fa-solid-900.eot?#iefix") format("embedded-opentype"), url("https://ginger-fw.herokuapp.com//fa-solid-900.woff2") format("woff2"), url("https://ginger-fw.herokuapp.com//fa-solid-900.woff") format("woff"), url("https://ginger-fw.herokuapp.com//fa-solid-900.ttf") format("truetype"), url("https://ginger-fw.herokuapp.com//fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa,
 .fas {
@@ -4412,8 +4412,8 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src: url("https://hektor.mx/dev/assets/fonts/fa-brands-400.eot");
-  src: url("https://hektor.mx/dev/assets/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://hektor.mx/dev/assets/fonts/fa-brands-400.woff2") format("woff2"), url("https://hektor.mx/dev/assets/fonts/fa-brands-400.woff") format("woff"), url("https://hektor.mx/dev/assets/fonts/fa-brands-400.ttf") format("truetype"), url("https://hektor.mx/dev/assets/fonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("https://ginger-fw.herokuapp.com//fa-brands-400.eot");
+  src: url("https://ginger-fw.herokuapp.com//fa-brands-400.eot?#iefix") format("embedded-opentype"), url("https://ginger-fw.herokuapp.com//fa-brands-400.woff2") format("woff2"), url("https://ginger-fw.herokuapp.com//fa-brands-400.woff") format("woff"), url("https://ginger-fw.herokuapp.com//fa-brands-400.ttf") format("truetype"), url("https://ginger-fw.herokuapp.com//fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
