@@ -9,7 +9,7 @@ import Vue from 'vue';
 Vue.mixin({
   data: function() {
       return {
-          url:'https://hektor.mx/dev/',
+          url:'https://ginger-fw.herokuapp.com/',
       }
   },
   created: function() {
