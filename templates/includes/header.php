@@ -29,7 +29,7 @@
     <link rel="apple-touch-icon" href="<?php echo IMG; ?>icon.png">
     <link rel="icon" type="image/png" href="<?php echo IMG ; ?>icon.png">
     <?php echo gfonts(GFONTS); ?>
-    <link rel="stylesheet" href="<?php echo CSS; ?>bundle.css<?=get_version();?>">
+    <link rel="stylesheet" href="<?php echo CSS; ?>app.css<?=get_version();?>">
     
     <div class='ginger-loader' id="ginger-loader">
         <div class='lds-ripple'>
@@ -46,6 +46,6 @@
 <![endif]-->
 
 </div>
-<div id="app" v-cloak>
+<div id="app" v-cloak :class="{'dark-theme':theme == 'dark','light-theme': theme == 'light'}">
     
     <vue-progress-bar></vue-progress-bar>

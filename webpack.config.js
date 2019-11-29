@@ -1,16 +1,33 @@
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+// const CompressionPlugin = require('compression-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = {
-  watch:true,
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js',  
+  },
   output: {
-    path: __dirname + '/assets',
-    filename: 'js/bundle.js'
-  }, 
-
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'assets')
+  },
+  optimization: {
+      splitChunks: {
+        chunks: 'all',
+        minSize: 30000,
+        automaticNameDelimiter: '-',
+      }
+    },
+    resolve: {
+      alias: {
+        'vue$': 'vue/dist/vue.esm.js',
+      },
+      extensions: ['*', '.js', '.vue', '.json']
+    },
+    
   module: {
     rules: [
       {
@@ -34,39 +51,44 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
-  },
+
   plugins:[
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'styles/bundle.css'
+      filename: 'styles/[name].css'
     }),
-    new BrowserSyncPlugin({
-      proxy: 'http://localhost:8888/www/ginger/',
-      tunnel: true,
-      files: [
-        {
-            match: [
-                '**/*.php',
-                '**/*.scss',
-                '**/*.css',
-                '**/*.vue',
-                '**/*.js'
-                
-            ],
-            fn: function(event, file) {
-                if (event === "change") {
-                    const bs = require('browser-sync').get('bs-webpack-plugin');
-                    bs.reload();
-                }
-            }
-        }
-    ]
-  }),
-  //new BundleAnalyzerPlugin()
+    new BrowserSyncPlugin(
+      {
+        watch: true,
+        open:false,
+        host: '127.1.1.0',
+        port: 3000,
+        proxy: 'http://localhost:8888/www/ginger/',
+        files: [
+          {
+              match: [
+                  '**/*.php',
+                  'src/scss/*.scss',
+                  'assets/styles/*.css',
+                  '**/*.vue',
+                  '**/*.js'
+                  
+              ],
+              fn: function(event, file) {
+                  if (event === "change") {
+                      const bs = require('browser-sync').get('bs-webpack-plugin');
+                      bs.reload();
+                  }
+              }
+          }
+      ]
+      },
+      {
+        reload: false,
+        name: 'bs-webpack-plugin'
+      }
+    ),
+    // new CompressionPlugin(),
+  // new BundleAnalyzerPlugin()
   ]
 }

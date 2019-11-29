@@ -14,7 +14,11 @@ telefono="0000000000">
 </float_social>
 
 </div><!--/End App--> 
-<script src="<?php echo JS; ?>bundle.js<?=get_version(); ?>" async></script>
+
+<script src="<?php echo JS; ?>vendors-app.js<?=get_version(); ?>" async></script>
+<script src="<?php echo JS; ?>app.js<?=get_version(); ?>" async></script>
+
+
 <script>
     window.onload = function() {
         document.getElementById('ginger-loader').style.display = "none";
