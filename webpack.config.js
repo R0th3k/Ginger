@@ -1,7 +1,10 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-//const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const CompressionPlugin = require('compression-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = {
   entry: './src/index.js',
@@ -74,7 +77,8 @@ module.exports = {
         reload: false,
         name: 'bs-webpack-plugin'
       }
-    )
-  //new BundleAnalyzerPlugin()
+    ),
+    // new CompressionPlugin(),
+  // new BundleAnalyzerPlugin()
   ]
 }
