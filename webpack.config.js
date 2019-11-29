@@ -7,12 +7,27 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js',  
+  },
   output: {
-    path: __dirname + '/assets',
-    filename: 'js/bundle.js'
-  }, 
-
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, 'assets')
+  },
+  optimization: {
+      splitChunks: {
+        chunks: 'all',
+        minSize: 30000,
+        automaticNameDelimiter: '-',
+      }
+    },
+    resolve: {
+      alias: {
+        'vue$': 'vue/dist/vue.esm.js',
+      },
+      extensions: ['*', '.js', '.vue', '.json']
+    },
+    
   module: {
     rules: [
       {
@@ -36,21 +51,16 @@ module.exports = {
       },
     ],
   },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
-  },
+
   plugins:[
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'styles/bundle.css'
+      filename: 'styles/[name].css'
     }),
     new BrowserSyncPlugin(
       {
         watch: true,
-        open:true,
+        open:false,
         host: '127.1.1.0',
         port: 3000,
         proxy: 'http://localhost:8888/www/ginger/',
