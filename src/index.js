@@ -52,6 +52,7 @@ Vue.mixin({
 import hello_world from './js/components/HelloWorld.vue';
 import float_social from './js/components/FloatSocial.vue';
 import contact from './js/components/Contact.vue';
+import switchmode from './js/components/SwitchMode.vue';
 
 
 new Vue({
@@ -59,21 +60,39 @@ new Vue({
   components:{
     hello_world,
     float_social,
-    contact
+    contact,
+    switchmode
   },
   data:{
-    mensaje: 'Hola Vue!'
+    mensaje: 'Hola Vue!',
+    theme:localStorage.theme,
   },
   methods:{
-    
+    toggle(){
+      if(this.theme === 'dark'){
+        this.theme = 'light';
+      }else{
+        this.theme = 'dark';
+      }
+    }
   },
   mounted(){
     this.$Progress.finish()
     //this.$bvModal.show('modal-1')
+
+    if(localStorage.theme == undefined){
+      localStorage.theme = 'light'
+    }
+      console.log(localStorage.theme)
   },
   created(){
     this.$Progress.start()
   },
+  watch:{
+    theme(mode) {
+      localStorage.theme = mode;
+    }
+  }
   
 })
 

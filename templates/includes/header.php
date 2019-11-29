@@ -46,6 +46,6 @@
 <![endif]-->
 
 </div>
-<div id="app" v-cloak>
+<div id="app" v-cloak :class="{'dark-theme':theme == 'dark','light-theme': theme == 'light'}">
     
     <vue-progress-bar></vue-progress-bar>

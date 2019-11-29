@@ -32,6 +32,7 @@
           <b-dropdown-item href="#">Profile</b-dropdown-item>
           <b-dropdown-item href="#">Sign Out</b-dropdown-item>
         </b-nav-item-dropdown>
+        <SwitchMode :theme="theme" @toggle="toggle"></SwitchMode>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
