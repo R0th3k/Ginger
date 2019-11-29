@@ -42,3 +42,5 @@ node_modules
 npm-debug.log
 *.config
 package-lock.json
+
+yarn.lock
