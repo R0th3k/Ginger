@@ -1,25 +1,9 @@
 <?php 
-
-    $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-   
-    //Si encuentra el string "dev" en la url se activa la constante DEV en true
-    if (false !== strpos($url,'/dev/')) {
-        define('DEV',true);
-    } else {
-        define('DEV',false);
-    }
-
-
     $pathLocal = '/www/ginger/';
     $urlLocal ='http://127.0.0.1:';
+    $pathRemote = '/ginger';
+    $urlRemote = 'https://hektor.mx/ginger/';
 
-    if(DEV){
-        $pathRemote = '/public_html/dev';
-        $urlRemote = 'https://hektor.mx/dev/';
-    }else{
-        $pathRemote = '/';
-        $urlRemote = 'https://ginger-fw.herokuapp.com/';
-    }
 
 require_once 'site_var.php';
 

@@ -28,16 +28,9 @@
     <link rel="manifest" href="<?php echo URL; ?>site.webmanifest">
     <link rel="apple-touch-icon" href="<?php echo IMG; ?>icon.png">
     <link rel="icon" type="image/png" href="<?php echo IMG ; ?>icon.png">
-    <?php echo gfonts(GFONTS); ?>
     <link rel="stylesheet" href="<?php echo CSS; ?>app.css<?=get_version();?>">
     
-    <div class='ginger-loader' id="ginger-loader">
-        <div class='lds-ripple'>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    
+
 </head>
 
 <body>
@@ -45,7 +38,13 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
 
+<div class='ginger-loader' id="ginger-loader">
+    <div class='lds-ripple'>
+        <div></div>
+        <div></div>
+    </div>
 </div>
+
 <div id="app" v-cloak :class="{'dark-theme':theme == 'dark','light-theme': theme == 'light'}">
     
-    <vue-progress-bar></vue-progress-bar>
+    

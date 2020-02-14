@@ -8,6 +8,5 @@
     define('CHARSET','utf-8');
     define('LANG_SITE','es');
     define('LOCALE','es_MX');
-    define('GFONTS','https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
     define('RECAPTCHA_PUBLIC','');
     define('RECAPTCHA_PRIVATE','');
